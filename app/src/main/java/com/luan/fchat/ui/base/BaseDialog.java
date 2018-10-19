@@ -40,6 +40,7 @@ public abstract class BaseDialog extends DialogFragment implements DialogMVPView
 
     private BaseActivity mActivity;
 
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
