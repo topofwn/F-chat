@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<template
+    format="4"
+    revision="1"
+    name="Nhat Duy Template Activity"
+    description="MVP activity constructor"
+    minApi="7"
+    minBuildApi="8">
+
+    <category value="nhatduytran" />
+
+    <dependency name="android-support-v4" revision="8" />
+	
+  <parameter
+        id="pathContainComponent"
+        name="Enter path contain component"
+        type="string"
+        constraints="nonempty|unique"
+        default="${packageName}"
+        help="Enter path contain component" />
+
+    <parameter
+        id="className"
+        name="Activity Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="EnterNameActivity"
+        help="The name of the activity class to create" />
+	
+	<parameter
+        id="activityName"
+        name="Activity Layout Name"
+        type="string"
+        constraints="layout|nonempty|unique"
+        default="activity_blank"
+        visibility="includeLayout"
+        suggest="activity_${classToResource(className)}_layout"
+        help="The name of the layout to create" />
+
+    <parameter
+        id="useSubPackage"
+        name="Use sub package?"
+        type="boolean"
+        default="true"
+        help="Add generated classes to specified package" />
+        
+    <parameter
+        id="subPackage"
+        name="Package name"
+        type="string"
+        default="blank"
+        visibility="useSubPackage"
+        help="Package name" />
+		
+	<parameter
+        id="useAdapter"
+        name="Does Activity have an adapter?"
+        type="boolean"
+        default="false"
+        help="Generate and add an adapter into activity" />
+        
+    <parameter
+        id="adapterName"
+        name="Adapter name"
+        type="string"
+        default="AdapterBlank"
+        visibility="useAdapter"
+        help="Adapter name" />
+		
+	<parameter
+        id="adapterLayoutName"
+        name="Adapter layout name"
+        type="string"
+        default="adapter_blank"
+        suggest="adapter_${classToResource(adapterName)}_layout"
+        visibility="useAdapter"
+        help="Adapter layout name" />
+		
+	<parameter
+        id="modelName"
+        name="Model name"
+        type="string"
+        default="ModelBlank"
+        visibility="useAdapter"
+        help="Model name" />
+	
+	<parameter
+        id="modelsubPackage"
+        name="Model Package name"
+        type="string"
+        default="blank"
+        visibility="useAdapter"
+        help="Model Package name" />
+		
+	<parameter
+        id="holderName"
+        name="Holder name"
+        type="string"
+        default="HolderBlank"
+        visibility="useAdapter"
+        help="Holder name" />
+		
+	<parameter
+        id="makeOnClickListener"
+        name="Custom OnClickListener name"
+        type="boolean"
+        default="true"
+        visibility="useAdapter"
+        help="Make an custom onClickListener" />
+
+    <parameter
+        id="includeLayout"
+        name="Create layout XML?"
+        type="boolean"
+        default="true"
+        help="Generate a layout XML for the activity" />
+
+    <parameter
+        id="includeView"
+        name="Create View?"
+        type="boolean"
+        default="true"
+        help="Generate a view for the activity" />
+
+    <parameter
+        id="includePresenter"
+        name="Create Presenter?"
+        type="boolean"
+        default="true"
+        help="Generate a presenter for the activity" />
+
+    <parameter
+        id="superClass"
+        name="Base Activity"
+        type="enum"
+        default="baseActivity"
+        help="if choose BaseActivity, please add your_package_name/ui/activity/BaseActivity otherwise MvpActivity" >
+        <option id="baseActivity">BaseActivity</option>
+        <!--<option id="appCompat">MvpAppCompatActivity</option>
+        <option id="activity">MvpActivity</option>-->
+    </parameter>
+
+	<parameter
+        id="contractName"
+        name="Contract Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="DefaultContract"
+        visibility="includeView|includePresenter"
+        suggest="${underscoreToCamelCase(classToResource(className))}Contract"
+        help="The name of the contract interface to create" />
+		
+	<parameter
+        id="presenterName"
+        name="Presenter Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="DefaultContract"
+        visibility="includeView|includePresenter"
+        suggest="${underscoreToCamelCase(classToResource(className))}Presenter"
+        help="The name of the presenter interface to create" />
+  
+    <thumbs>
+        <thumb>template_moxy_activity.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+
+    <execute file="recipe.xml.ftl" />
+
+</template>

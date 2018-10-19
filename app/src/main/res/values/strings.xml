@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">F chat</string>
+
+    <string name="api_retry_error">Please retry!</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <string name="api_default_error">api_default_error</string>
+    <string name="token_expired">token_expired</string>
+
+    <string name="upload_pictures_option">upload_pictures_option</string>
+    <string name="how_do_you_want_to_set_your_picture">how_do_you_want_to_set_your_picture</string>
+    <string name="gallery">gallery</string>
+    <string name="camera">camera</string>
+    <string name="error_select_avatar">error_select_avatar</string>
+    <string name="failed_to_crop_pic">failed_to_crop_pic</string>
+
+    <string name="some_error">some_error</string>
+    <string name="congrats">congrats</string>
+    <string name="ok">ok</string>
+    <string name="usrname">User name</string>
+    <string name="password">Password</string>
+    <string name="no_internet_connection">no_internet_connection</string>
+    <string name="connection_error">connection_error</string>
+</resources>

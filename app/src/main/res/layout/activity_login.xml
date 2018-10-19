@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_xnormal"
+    android:background="@color/blue_transparent"
+    >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:hint="@string/usrname"
+        android:background="@color/gray_line"
+        android:inputType="textEmailAddress"
+        android:id="@+id/edtUsrName"
+        android:textColorHint="@color/white"
+        android:padding="@dimen/padding_very_small"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:hint="@string/password"
+        android:id="@+id/edtPw"
+        android:inputType="textPassword"
+        android:layout_marginTop="@dimen/padding_xlarge"
+        android:layout_below="@+id/edtUsrName"
+        android:background="@color/gray_line"
+        android:textColorHint="@color/white"
+        android:padding="@dimen/padding_very_small"
+        />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:text="Sign up"
+        android:id="@+id/btnSignUp"
+        android:textColor="@color/white"
+        android:background="@color/green"
+        android:layout_marginTop="@dimen/text_size_xlarge"
+        android:layout_below="@+id/edtPw"
+        />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:text="Sign in"
+        android:id="@+id/btnSignIn"
+        android:textColor="@color/white"
+        android:background="@color/green"
+        android:layout_marginTop="@dimen/text_size_xlarge"
+        android:layout_below="@+id/edtPw"
+        />
+
+</RelativeLayout>
