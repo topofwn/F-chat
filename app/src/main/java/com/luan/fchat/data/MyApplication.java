@@ -1,14 +1,17 @@
 package com.luan.fchat.data;
 
 import android.app.Application;
+import android.content.Context;
 
 public class MyApplication extends Application {
 
     @Override
     public void onCreate() {
         super.onCreate();
-        LanguageController.newInstance(getApplicationContext());
     }
 
-
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+    }
 }

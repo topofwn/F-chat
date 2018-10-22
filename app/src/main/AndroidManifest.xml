@@ -42,7 +42,14 @@
                     android:scheme="default" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".ui.facechat.FaceChatActivity"
+                  android:screenOrientation="portrait"
+            >
+        </activity>
+        <activity android:name=".ui.register.RegisterActivity"
+                  android:screenOrientation="portrait"
+            >
+        </activity>
     </application>
 
 </manifest>

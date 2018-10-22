@@ -48,9 +48,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.btnSignIn){
-            ActivityUtils.startActivity(LoginActivity.this, FaceChatActivity.class,true);
+            ActivityUtils.startActivity(LoginActivity.this, FaceChatActivity.class,true,true);
         }else if(v.getId() == R.id.btnSignUp){
-            ActivityUtils.startActivity(LoginActivity.this, RegisterActivity.class,false);
+            ActivityUtils.startActivity(LoginActivity.this, RegisterActivity.class,false,true);
         }
     }
 }
